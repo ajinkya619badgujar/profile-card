@@ -1,0 +1,297 @@
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+
+
+
+html,body {
+  background-color: #221f1f;
+  
+  
+  font-family: "Poppins", sans-serif;
+  color: whitesmoke;
+  
+
+}
+.profile-card{
+  height: 600px;
+  width: 500px;
+  background-color: #050505;
+  align-self: center;
+  margin: auto;
+  box-shadow: 4px 4px 8px #050505;
+  margin-top: 75px;
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  justify-items: center;
+ 
+  
+}
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #0b0a0a;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -35px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+
+
+
+
+.instagram:hover{
+  background-image: url(https://flyclipart.com/thumb2/instagram-logo-png-transparent-vector-83670.png) ;
+  background-size: 60px;
+  
+  
+  background-position: center;
+  
+  
+  
+
+}
+.youtube:hover{
+  background-image: url(https://flyclipart.com/thumb2/black-youtube-logo-png-free-download-469215.png);
+  background-size: 70px;
+  background-position: center;
+  
+}
+.github:hover{
+  background-image: url(https://banner2.cleanpng.com/20180824/jtl/kisspng-computer-icons-logo-portable-network-graphics-clip-icons-for-free-iconza-circle-social-5b7fe46b0bac53.1999041115351082030478.jpg);
+  background-size: 100px;
+  background-position: center;
+}
+.facebook:hover{ background-image: url(https://flyclipart.com/thumb2/iconsetc-flat-circle-white-on-black-raphael-facebook-icon-466346.png);
+  background-size: 70px;
+  background-position: center;
+
+}
+.twitter:hover{ background-image: url(https://flyclipart.com/thumb2/twitter-icon-469072.png);
+  background-size: 70px;
+  background-position: center;
+
+}
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877F2;
+  color: #ffffff;
+}
+
+
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1DA1F2;
+  color: #ffffff;
+}
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #f10382;
+  color: #ffffff;
+}
+
+
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background: #333333;
+  color: #ffffff;
+}
+
+
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background: #CD201F;
+  color: #ffffff; 
+}
+
+.icons{
+  width: 350px;
+  height: 200px;
+  margin-top: -80px !important;  
+  margin: auto;
+  align-self: center;
+}
+img { width:270px; 
+  margin-left: 100px;
+  
+  position: relative;
+  z-index: 1;
+
+
+  
+
+}
+.data{
+  margin-top: 30PX;
+  width: 220px;
+  position: absolute;
+  margin-left: 140px;
+  height: 400px;
+  
+  
+  
+  
+  
+}
+img:hover { 
+  margin-left: 0px;
+  
+  transition: 2s;
+ 
+  
+}
+.profile-card:hover>.data{
+  margin-right: -120px;
+  transition: 2s;
+  
+  
+}
+
+
+ .data .iam{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 400;
+
+ }
+ .data .quality{
+margin-left: 10px;
+height: 45px;
+line-height: 45px;
+/*line-height for gap betwin list*/ 
+overflow: hidden;}
+
+.quality li{
+  list-style: none;
+  color: #16f37d;
+  font-size: 30px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+
+/* hero=data , static=iam , dynamic=quality  */
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+.quality li span{
+   /*doubt*/
+  position: relative;
+  margin: 0px 0px;
+  line-height: 45px;
+}
+
+.quality li span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  border-left: 2px solid #16f37d;
+  animation: typing 3s steps(10) infinite;
+  
+
+}
+@keyframes typing{
+  40%, 60%{
+    left: calc(80% + 30px );
+  }
+  100%{
+    left: 0;
+  }
+  
+}
+h2{
+  margin-top: 150px;
+  
+  
+}
+p{
+  margin-left: 0px;
+}
+.follow > img{
+  margin-left: 0px;
+}
+
+.icon:hover{
+  transition: 0.1s;
+}
+.title{
+  text-align: center;
+  margin-top: -100px;
+ /* animation: name duration timing-function delay iteration-count direction fill-mode;*/
+ font-family: 'Courier New', Courier, monospace;
+  
+}
+body:hover > .title{
+ background-color: #CD201F;
+  transition: 1s;
+  
+  
+}
+.profile-card:hover ~ .title{
+  background-color: #1877F2;
+  transition: 2s;
+}
